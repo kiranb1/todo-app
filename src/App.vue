@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <AddToDo v-on:add-todo="addTodo" />
-    <TodoList v-bind:todos="todos" v-on:delete-todo="deleteTodo"/>
+    <TodoList v-bind:todos="todos" v-on:delete-todo="deleteTodo" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   components: {
     TodoList,
     Header,
-    AddToDo
+    AddToDo,
   },
   data() {
     return {
@@ -33,7 +33,7 @@ export default {
         //   complete: true,
         // },
       ],
-    }
+    };
   },
   methods: {
     addTodo(todo) {
@@ -44,11 +44,9 @@ export default {
 
       this.todos = [...this.todos, newTodo];
     },
-    deleteTodo(id){
-      this.todos = this.todos.filter(
-        todo => todo.id !== id
-      )
-    }
+    deleteTodo(id) {
+      this.todos = this.todos.filter((todo) => todo.id !== id);
+    },
   },
 };
 </script>

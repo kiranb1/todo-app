@@ -2,7 +2,10 @@
   <li class="list-group-item" v-bind:class="{'todo-complete':todo.complete}">
     <input type="checkbox" v-on:change="toggleComplete" />
     {{ todo.title }}
-    <button class="float-right" @click="$emit('delete-todo', todo.id)">
+    <button
+      class="float-right border-0 bg-white"
+      @click="$emit('delete-todo', todo.id)"
+    >
       <i class="fas fa-trash"></i>
     </button>
   </li>
@@ -30,5 +33,14 @@ li {
 
 .todo-complete {
   text-decoration: line-through;
+}
+
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+button {
+  color: #f09;
 }
 </style>

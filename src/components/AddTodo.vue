@@ -10,7 +10,7 @@
         aria-describedby="button-addon2"
       />
       <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Add</button>
       </div>
     </div>
   </form>
@@ -43,4 +43,23 @@ export default {
 </script>
 
 <style scoped>
+input,
+button {
+  border-radius: 0;
+}
+
+button {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+button:hover {
+  background-color: #65676c;
+  border-color: #65676c;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
 </style>

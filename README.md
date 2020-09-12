@@ -1,5 +1,7 @@
 # todo-app
 
+This app will allow you to create, complete and delete todos.
+
 ## Project setup
 ```
 npm install
